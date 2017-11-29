@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:background="#ec6149"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image_userlogo"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:actualImageScaleType="centerInside"
+            app:placeholderImage="@drawable/ic_image_my_logo"
+            app:roundAsCircle="true"/>
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:text="yang"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_user_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:text="Android攻城狮"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/text_user_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:text="下载10 喜欢10 上传10 收获喜欢10"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#cecdcd"/>
+
+    <LinearLayout
+        android:id="@+id/ll_personal_user_information"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_image_user"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="个人资料"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/nubia_right_arrow"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#e9e4e4"/>
+    <LinearLayout
+        android:id="@+id/ll_personal_downloads"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_image_download"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="我的下载"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/nubia_right_arrow"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#e9e4e4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_personal_update"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_image_uodate"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="资料共享"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/nubia_right_arrow"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#e9e4e4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_personal_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_image_text"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="近期考试"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:src="@drawable/nubia_right_arrow"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#e9e4e4"/>
+
+
+
+</LinearLayout>
