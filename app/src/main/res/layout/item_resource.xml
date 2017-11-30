@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="5dp"
+    android:padding="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item_goods"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_item_goods"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                app:placeholderImage="@drawable/ic_abc_image_english"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tt_item_name_goodsname"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:text="【四级真题】2016年春季大学英语四级真题"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tt_item_goods_worth"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:text="1积分"
+                    android:textColor="#ff0707"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tt_item_goods_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="这是个非常好的复习资料"
+                    android:textColor="#696969"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="归属:"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="48dp"/>
+
+                    <TextView
+                        android:id="@+id/tt_kemu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center_vertical"
+                        android:text="计科院,物联网工程,物联网感知技术"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tt_resource_numb_check"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_vertical"
+                android:text="浏览200次"
+                android:textSize="15sp"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_logo_download"
+                android:layout_width="20dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="80dp"
+                app:actualImageScaleType="centerInside"
+                app:placeholderImage="@drawable/ic_abc_image_message"/>
+
+            <TextView
+                android:id="@+id/tt_resource_numb_download"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="200:"
+                android:textSize="15sp"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_resource_logo_zan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                app:actualImageScaleType="centerInside"
+                app:placeholderImage="@drawable/zan_selector"
+                app:roundAsCircle="true"/>
+
+            <TextView
+                android:id="@+id/tt_resource_numb_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="200:"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

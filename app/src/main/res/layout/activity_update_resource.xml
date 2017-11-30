@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-20dp"
+    android:orientation="vertical"
+    tools:context="com.swpuiot.yikao.view.activity.UpdateResourceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_update_resource"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="4"
+            android:background="?attr/colorPrimaryDark"
+            app:theme="@android:style/ThemeOverlay.Material.Dark"
+            app:title="资料上传"/>
+
+        <TextView
+            android:id="@+id/tt_send_file"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ec6149"
+            android:gravity="center"
+            android:text="上传"
+            android:textColor="#fff"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="12dp"/>
+    <LinearLayout
+        android:id="@+id/ll_reset_user_name"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="文件:"
+            android:textColor="#464646"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/tt_file_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="4"
+            android:singleLine="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="点击选择文件"
+            android:textColor="#585858"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/btn_removefile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除"
+            android:textColor="#646262"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#cecdcd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:padding="4dp"
+        android:text="简介:"
+        android:textColor="#464646"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/tt_file_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:background="@null"
+        android:maxLines="5"
+        android:gravity="center_vertical"
+        android:hint="请填写文档简介,帮助文档推广"
+        android:textColor="#585858"
+        android:textSize="18dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#cecdcd"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="学院:"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_academy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="年级:"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="2dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="学科:"
+            android:textColor="#464646"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/tt_file_course_namee"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="5"
+            android:background="@null"
+            android:maxLength="15"
+            android:gravity="center_vertical"
+            android:hint="请输入上传文档所属科目"
+            android:singleLine="true"
+            android:textColor="#878787"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:background="#cecdcd"/>
+</LinearLayout>
