@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.adapter.SomeBody.SomeBodyRecyclerViewAdapter;
-import com.swpuiot.yikao.adapter.somebodyneeds.SomoBodyNeedsAdapter;
+import com.swpuiot.yikao.adapter.somebodyneeds.SomeBodyNeedsHolder;
 import com.swpuiot.yikao.data.MyEntityList;
 import com.swpuiot.yikao.data.NetWork;
 import com.swpuiot.yikao.entities.NeedSomeBodyEntity;
@@ -67,7 +67,7 @@ public class SomeBodyFragment extends Fragment implements SomeBodyHolder.view {
     private void setNeedsAdapter() {
         List<NeedSomeBodyEntity> needSomeBodyEntities = new ArrayList<>();
 //        mEntityList.getNeedsList(needSomeBodyEntities);
-        SomoBodyNeedsAdapter adapter = new SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
+        SomeBodyNeedsHolder.SomoBodyNeedsAdapter adapter = new SomeBodyNeedsHolder.SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
 //        needsHelp.setAdapter(adapter);
     }
 

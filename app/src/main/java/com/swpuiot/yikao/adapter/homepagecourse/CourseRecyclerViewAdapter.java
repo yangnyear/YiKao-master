@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.clicklistener.MyItemClickListener;
@@ -18,7 +20,7 @@ import java.util.List;
  * Created by 羊荣毅_L on 2017/4/1.
  * HomePageRecyclerViewAdapter
  */
-public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecyclerViewHolder> {
+public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecyclerViewAdapter.CourseRecyclerViewHolder> {
     private Context mContext;
     private LayoutInflater mInflater;
     private MyItemClickListener mClickListener;
@@ -56,5 +58,41 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
     //暴露给Recycleview设置长按点击事件
     public void setLongClickListener(MyItemLongClickListener longClickListener) {
         mLongClickListener = longClickListener;
+    }
+
+    /**
+     * Created by 羊荣毅_L on 2017/4/1.
+     * HomepageScourseRecyclerViewHolder
+     */
+    class CourseRecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnLongClickListener{
+        public ImageView courseImageContent;
+        public TextView courseName;
+        public MyItemClickListener mClickListener;
+        public MyItemLongClickListener mLongClickListener;
+
+        public CourseRecyclerViewHolder(View itemView, MyItemClickListener clickListener, MyItemLongClickListener longClickListener) {
+            super(itemView);
+            courseImageContent= (ImageView) itemView.findViewById(R.id.image_homepage_course);
+            courseName= (TextView) itemView.findViewById(R.id.tt_course_name);
+            mClickListener = clickListener;
+            mLongClickListener = longClickListener;
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (itemView!=null){
+                mClickListener.onItemClick(mCourseEntities, getPosition());
+            }
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            if (itemView!=null){
+                mLongClickListener.onItemLongClick(mCourseEntities,getPosition());
+            }
+            return true;
+        }
     }
 }
