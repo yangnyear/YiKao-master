@@ -27,6 +27,9 @@ public class SomeBodyNeedsHolder extends RecyclerView.ViewHolder {
     public TextView messageNumb;
     public TextView zanNumb;
 
+
+
+
     public SomeBodyNeedsHolder(View itemView) {
         super(itemView);
         time = (TextView) itemView.findViewById(R.id.tt_needs_somebody_time);
