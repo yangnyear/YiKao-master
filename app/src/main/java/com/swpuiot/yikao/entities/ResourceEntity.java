@@ -33,6 +33,32 @@ public class ResourceEntity {
     private int dataGrade;
     private String dataCollege;
 
+    public ResourceEntity(int id, int userId, String dataTitle, String dataDescription, String dataUrl, int downloadNumber, int viewNumber, int dataPraise, String dataCategory, String dataImgs, int dataGrade, String dataCollege, String pubDate) {
+        this.id = id;
+        this.userId = userId;
+        this.dataTitle = dataTitle;
+        this.dataDescription = dataDescription;
+        this.dataUrl = dataUrl;
+        this.downloadNumber = downloadNumber;
+        this.viewNumber = viewNumber;
+        this.dataPraise = dataPraise;
+        this.dataCategory = dataCategory;
+        this.dataImgs = dataImgs;
+        this.dataGrade = dataGrade;
+        this.dataCollege = dataCollege;
+        this.pubDate = pubDate;
+    }
+
+    private String pubDate;   //发布时间
+
+    public String getPubDate() {
+        return pubDate;
+    }
+
+    public void setPubDate(String pubDate) {
+        this.pubDate = pubDate;
+    }
+
     public int getId() {
         return id;
     }

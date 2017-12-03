@@ -67,7 +67,7 @@ public class SomeBodyFragment extends Fragment implements SomeBodyHolder.view {
     private void setNeedsAdapter() {
         List<NeedSomeBodyEntity> needSomeBodyEntities = new ArrayList<>();
 //        mEntityList.getNeedsList(needSomeBodyEntities);
-        SomeBodyNeedsHolder.SomoBodyNeedsAdapter adapter = new SomeBodyNeedsHolder.SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
+//        SomoBodyNeedsAdapter adapter = new SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
 //        needsHelp.setAdapter(adapter);
     }
 

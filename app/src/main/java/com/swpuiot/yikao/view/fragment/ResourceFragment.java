@@ -2,14 +2,17 @@ package com.swpuiot.yikao.view.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
+import com.swpuiot.yikao.adapter.Resource.ResourceRecyclerViewAdapter;
 import com.swpuiot.yikao.data.MyEntityList;
 import com.swpuiot.yikao.presenter.ResourceHolder;
+import com.swpuiot.yikao.presenter.ResourcePresenter;
 
 
 /**
@@ -20,7 +23,8 @@ import com.swpuiot.yikao.presenter.ResourceHolder;
 public class ResourceFragment extends Fragment implements ResourceHolder.view {
     private RecyclerView resourceList;
     private View mView;
-    private MyEntityList mEntityList;
+    private ResourceHolder.presenter presenter;
+    private LinearLayoutManager layoutManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,8 +42,15 @@ public class ResourceFragment extends Fragment implements ResourceHolder.view {
     }
 
     private void inite() {
-        mEntityList = MyEntityList.getMyEntityList();
         resourceList= (RecyclerView) mView.findViewById(R.id.rcl_resource_list);
+        presenter=new ResourcePresenter(this,this.getContext());
+        layoutManager=new LinearLayoutManager(this.getContext());
 
+    }
+
+    @Override
+    public void initResourceRecycleView(RecyclerView.LayoutManager layoutManager, ResourceRecyclerViewAdapter adapter) {
+        resourceList.setLayoutManager(layoutManager);
+        resourceList.setAdapter(adapter);
     }
 }

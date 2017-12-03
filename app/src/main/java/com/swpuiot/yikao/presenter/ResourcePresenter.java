@@ -1,9 +1,11 @@
 package com.swpuiot.yikao.presenter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 
 import com.swpuiot.yikao.data.MyEntityList;
+import com.swpuiot.yikao.entities.ResourceEntity;
 
 import java.util.List;
 
@@ -13,14 +15,17 @@ import java.util.List;
 public class ResourcePresenter implements ResourceHolder.presenter {
     private ResourceHolder.view mView;
     private Context mContext;
-    private MyEntityList mEntityList;
-    private List<String> StringList;
+    private List<ResourceEntity> resourceEntities;
     private ArrayAdapter<String> Adapter;
 
 
     public ResourcePresenter(ResourceHolder.view view, Context context) {
         mView = view;
         mContext = context;
-        mEntityList = MyEntityList.getMyEntityList();
+    }
+
+    @Override
+    public void initResourceRecycleView(RecyclerView.LayoutManager layoutManager) {
+
     }
 }
