@@ -27,7 +27,7 @@ public class ResourcePresenter implements ResourceHolder.presenter {
 
     @Override
     public void initResourceRecycleView(RecyclerView.LayoutManager layoutManager) {
-        StringBuilder sb=MyEntityList.getMyEntityList().getResponse();
-        Log.d("yikao", "ResourcePresenter="+sb);
+//        StringBuilder sb=MyEntityList.getMyEntityList().getResponse();
+//        Log.d("yikao", "ResourcePresenter="+sb);
     }
 }
