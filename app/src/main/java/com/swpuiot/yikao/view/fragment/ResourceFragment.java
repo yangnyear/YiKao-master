@@ -45,7 +45,7 @@ public class ResourceFragment extends Fragment implements ResourceHolder.view {
         resourceList= (RecyclerView) mView.findViewById(R.id.rcl_resource_list);
         presenter=new ResourcePresenter(this,this.getContext());
         layoutManager=new LinearLayoutManager(this.getContext());
-
+        presenter.initResourceRecycleView(layoutManager);
     }
 
     @Override

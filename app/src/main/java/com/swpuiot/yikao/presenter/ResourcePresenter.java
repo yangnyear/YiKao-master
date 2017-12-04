@@ -2,6 +2,7 @@ package com.swpuiot.yikao.presenter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import com.swpuiot.yikao.data.MyEntityList;
@@ -26,6 +27,7 @@ public class ResourcePresenter implements ResourceHolder.presenter {
 
     @Override
     public void initResourceRecycleView(RecyclerView.LayoutManager layoutManager) {
-
+        StringBuilder sb=MyEntityList.getMyEntityList().getResponse();
+        Log.d("yikao", "ResourcePresenter="+sb);
     }
 }
