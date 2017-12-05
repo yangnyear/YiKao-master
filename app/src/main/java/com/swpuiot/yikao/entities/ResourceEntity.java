@@ -32,6 +32,7 @@ public class ResourceEntity {
     private String dataImgs;
     private int dataGrade;
     private String dataCollege;
+    private String pubDate;   //发布时间
 
     public ResourceEntity(int id, int userId, String dataTitle, String dataDescription, String dataUrl, int downloadNumber, int viewNumber, int dataPraise, String dataCategory, String dataImgs, int dataGrade, String dataCollege, String pubDate) {
         this.id = id;
@@ -48,8 +49,6 @@ public class ResourceEntity {
         this.dataCollege = dataCollege;
         this.pubDate = pubDate;
     }
-
-    private String pubDate;   //发布时间
 
     public String getPubDate() {
         return pubDate;
