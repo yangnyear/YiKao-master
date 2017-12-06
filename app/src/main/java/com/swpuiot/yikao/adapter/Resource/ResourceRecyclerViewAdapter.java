@@ -57,6 +57,15 @@ public class ResourceRecyclerViewAdapter extends RecyclerView.Adapter<ResourceRe
     public int getItemCount() {
         return 0;
     }
+    //暴露给Recycleview设置点击事件
+    public void setClickListener(MyItemClickListener clickListener) {
+        mClickListener = clickListener;
+    }
+
+    //暴露给Recycleview设置长按点击事件
+    public void setLongClickListener(MyItemLongClickListener longClickListener) {
+        mLongClickListener = longClickListener;
+    }
 
     /**
      * Created by 羊荣毅_L on 2017/4/6.

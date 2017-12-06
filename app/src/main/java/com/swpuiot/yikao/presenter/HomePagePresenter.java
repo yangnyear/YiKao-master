@@ -41,6 +41,8 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
         newsAdapter=new NewsRecyclerViewAdapter(mContext,mNewsEntityList);
         courseAdapter.setLongClickListener(this);
         courseAdapter.setClickListener(this);
+        newsAdapter.setClickListener(this);
+        newsAdapter.setLongClickListener(this);
 
     }
 
