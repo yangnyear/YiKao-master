@@ -97,14 +97,14 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
         @Override
         public void onClick(View v) {
             if (itemView!=null){
-                mClickListener.onItemClick(newsList, getPosition());
+                mClickListener.onItemClick(newsList, getPosition(),2);
             }
         }
 
         @Override
         public boolean onLongClick(View v) {
             if (itemView != null) {
-                mLongClickListener.onItemLongClick(newsList, getPosition());
+                mLongClickListener.onItemLongClick(newsList, getPosition(),2);
             }
             return true;
         }

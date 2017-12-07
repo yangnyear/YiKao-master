@@ -20,32 +20,22 @@ import java.util.List;
 public class ResourcePresenter implements ResourceHolder.presenter, MyItemClickListener, MyItemLongClickListener {
     private ResourceHolder.view mView;
     private Context mContext;
-    private static List<ResourceEntity> resourceEntities;
-    private ArrayAdapter<String> Adapter;
-    private RecyclerView.LayoutManager layoutManager;
-
+    private  List<ResourceEntity> resourceEntities;
+    private   ResourceRecyclerViewAdapter adapter;
     public ResourcePresenter(ResourceHolder.view view, Context context) {
         mView = view;
         mContext = context;
     }
-      public static void bindResoude(List<ResourceEntity> resourceEs) {
-          Log.d("yikao", "bindResoude:"+resourceEs.size());
-         resourceEntities=resourceEs;
-       }
     @Override
     public void initResourceRecycleView(RecyclerView.LayoutManager layoutManager) {
-
-        MyEntityList.getMyEntityList().sendRequestWithHttpURLConnection();
-
-        if (resourceEntities == null) {
-            Log.d("yikao", "initResourceRecycleView:resourceEntities.size=null");
-        } else {
+           resourceEntities=MyEntityList.getResouseListy();
             Log.d("yikao", "initResourceRecycleView:resourceEntities.size=" + resourceEntities.size());
-            ResourceRecyclerViewAdapter adapter = new ResourceRecyclerViewAdapter(mContext, resourceEntities);
+            adapter = new ResourceRecyclerViewAdapter(mContext, resourceEntities);
+            mView.initResourceRecycleView(layoutManager, adapter);
+            Log.d("yikao", "initResourceRecycleView: ");
             adapter.setClickListener(this);
             adapter.setLongClickListener(this);
-            mView.initResourceRecycleView(layoutManager, adapter);
-        }
+
     }
 
     @Override

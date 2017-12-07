@@ -9,5 +9,5 @@ import java.util.List;
  * Recycleview 点击事件
  */
 public interface MyItemClickListener {
-    public void onItemClick(List dataList, int position);
+    public void onItemClick(List dataList, int position,int type);
 }

@@ -9,5 +9,5 @@ import java.util.List;
  * recycleview长按
  */
 public interface MyItemLongClickListener {
-    public void onItemLongClick(List dataList, int position);
+    public void onItemLongClick(List dataList, int position,int type);
 }

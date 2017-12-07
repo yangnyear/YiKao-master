@@ -29,12 +29,12 @@ public class ResourceEntity {
     private int viewNumber;
     private int dataPraise;
     private String dataCategory;
-    private String dataImgs;
+    private int dataImgs;
     private int dataGrade;
     private String dataCollege;
     private String pubDate;   //发布时间
 
-    public ResourceEntity(int id, int userId, String dataTitle, String dataDescription, String dataUrl, int downloadNumber, int viewNumber, int dataPraise, String dataCategory, String dataImgs, int dataGrade, String dataCollege, String pubDate) {
+    public ResourceEntity(int id, int userId, String dataTitle, String dataDescription, String dataUrl, int downloadNumber, int viewNumber, int dataPraise, String dataCategory, int dataImgs, int dataGrade, String dataCollege, String pubDate) {
         this.id = id;
         this.userId = userId;
         this.dataTitle = dataTitle;
@@ -130,11 +130,11 @@ public class ResourceEntity {
         this.dataCategory = dataCategory;
     }
 
-    public String getDataImgs() {
+    public int getDataImgs() {
         return dataImgs;
     }
 
-    public void setDataImgs(String dataImgs) {
+    public void setDataImgs(int dataImgs) {
         this.dataImgs = dataImgs;
     }
 

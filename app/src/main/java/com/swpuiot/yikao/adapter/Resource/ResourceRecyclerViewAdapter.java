@@ -3,6 +3,7 @@ package com.swpuiot.yikao.adapter.Resource;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ public class ResourceRecyclerViewAdapter extends RecyclerView.Adapter<ResourceRe
     private List<ResourceEntity> resourceList;
 
     public ResourceRecyclerViewAdapter(Context context, List<ResourceEntity> resourceList) {
+        Log.d("yikao", "ResourceRecyclerViewAdapter: ");
         mContext = context;
         mInflater = LayoutInflater.from(context);
         this.resourceList = resourceList;
@@ -36,6 +38,7 @@ public class ResourceRecyclerViewAdapter extends RecyclerView.Adapter<ResourceRe
 
     @Override
     public ResourceRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Log.d("yikao", "onCreateViewHolder: ");
         View itemView = mInflater.inflate(R.layout.item_resource,parent,false);
         ResourceRecyclerViewHolder holder=new ResourceRecyclerViewHolder(itemView,mClickListener,mLongClickListener);
         return holder;
@@ -43,14 +46,15 @@ public class ResourceRecyclerViewAdapter extends RecyclerView.Adapter<ResourceRe
 
     @Override
     public void onBindViewHolder(ResourceRecyclerViewHolder holder, int position) {
+        Log.d("yikao", "onBindViewHolder: ");
         holder.RSName.setText(resourceList.get(position).getDataTitle());
         holder.RSprice.setText("0积分");
         holder.RSdescription.setText(resourceList.get(position).getDataDescription());
         holder.RSCategory.setText(resourceList.get(position).getDataCategory());
-        holder.RSViewNumb.setText(resourceList.get(position).getViewNumber());
-        holder.RSdowloadNumb.setText(resourceList.get(position).getDownloadNumber());
-        holder.RSzanNumb.setText(resourceList.get(position).getDataPraise());
-        holder.RSicon.setImageURI(Uri.parse(resourceList.get(position).getDataImgs()));
+        holder.RSViewNumb.setText(resourceList.get(position).getViewNumber()+"");
+        holder.RSdowloadNumb.setText(resourceList.get(position).getDownloadNumber()+"");
+        holder.RSzanNumb.setText(resourceList.get(position).getDataPraise()+"");
+        holder.RSicon.setImageResource(resourceList.get(position).getDataImgs());
     }
 
     @Override
@@ -102,14 +106,14 @@ public class ResourceRecyclerViewAdapter extends RecyclerView.Adapter<ResourceRe
         @Override
         public void onClick(View v) {
             if (itemView != null) {
-                mClickListener.onItemClick(resourceList, getPosition());
+                mClickListener.onItemClick(resourceList, getPosition(),1);
             }
         }
 
         @Override
         public boolean onLongClick(View v) {
             if (itemView != null) {
-                mLongClickListener.onItemLongClick(resourceList, getPosition());
+                mLongClickListener.onItemLongClick(resourceList, getPosition(),1);
             }
             return true;
         }

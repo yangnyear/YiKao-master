@@ -37,16 +37,16 @@ public class SomeBodyRecyclerViewAdapter extends RecyclerView.Adapter<SomeBodyRe
 
     @Override
     public void onBindViewHolder(SomeBodyRecyclerViewHolder holder, int position) {
-        holder.name.setText(mSomeBodyEntities.get(position).getId()+"");
+        holder.name.setText(mSomeBodyEntities.get(position).getName());
         holder.time.setText(mSomeBodyEntities.get(position).getTime());
-        holder.prooduce.setText(mSomeBodyEntities.get(position).getPubDescription());
-        holder.jidian.setText(mSomeBodyEntities.get(position).getShareScore()+"");
-        holder.phoneNumb.setText(mSomeBodyEntities.get(position).getPubPhone());
-        holder.goodAt.setText(mSomeBodyEntities.get(position).getStudySubject());
-        holder.checkNumb.setText("浏览"+mSomeBodyEntities.get(position).getViewNumb()+"次");
-        holder.messageNumb.setText(mSomeBodyEntities.get(position).getCommentNumb()+"");
-        holder.zanNumb.setText(mSomeBodyEntities.get(position).getPraiseNumb()+"");
-        holder.image.setImageURI(Uri.parse(mSomeBodyEntities.get(position).getUserPortrait()));
+        holder.prooduce.setText(mSomeBodyEntities.get(position).getDescription());
+        holder.jidian.setText(mSomeBodyEntities.get(position).getGreade()+"");
+        holder.phoneNumb.setText(mSomeBodyEntities.get(position).getPhoneNumb());
+        holder.goodAt.setText(mSomeBodyEntities.get(position).getGoodsat());
+        holder.checkNumb.setText(+mSomeBodyEntities.get(position).getCheckNunmb()+"");
+        holder.messageNumb.setText(mSomeBodyEntities.get(position).getGuanzhunumb()+"");
+        holder.zanNumb.setText(mSomeBodyEntities.get(position).getZannumb()+"");
+        holder.image.setImageResource(mSomeBodyEntities.get(position).getLogid());
     }
 
     @Override

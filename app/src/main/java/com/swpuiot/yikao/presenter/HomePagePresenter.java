@@ -66,12 +66,20 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
     }
 
     @Override
-    public void onItemClick(List dataList, int position) {
+    public void onItemClick(List dataList, int position, int type) {
+        if (type==1){
 
+        }else{
+
+        }
     }
 
     @Override
-    public void onItemLongClick(List dataList, int position) {
+    public void onItemLongClick(List dataList, int position, int type) {
+        if (type==1){
 
+        }else{
+
+        }
     }
 }

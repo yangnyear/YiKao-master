@@ -83,14 +83,14 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
         @Override
         public void onClick(View v) {
             if (itemView!=null){
-                mClickListener.onItemClick(mCourseEntities, getPosition());
+                mClickListener.onItemClick(mCourseEntities, getPosition(),1);
             }
         }
 
         @Override
         public boolean onLongClick(View v) {
             if (itemView!=null){
-                mLongClickListener.onItemLongClick(mCourseEntities,getPosition());
+                mLongClickListener.onItemLongClick(mCourseEntities,getPosition(),1);
             }
             return true;
         }

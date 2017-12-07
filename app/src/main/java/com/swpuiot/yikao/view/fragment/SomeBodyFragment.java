@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.adapter.SomeBody.SomeBodyRecyclerViewAdapter;
-import com.swpuiot.yikao.adapter.somebodyneeds.SomeBodyNeedsHolder;
+import com.swpuiot.yikao.adapter.somebodyneeds.SomoBodyNeedsAdapter;
 import com.swpuiot.yikao.data.MyEntityList;
 import com.swpuiot.yikao.data.NetWork;
 import com.swpuiot.yikao.entities.NeedSomeBodyEntity;
@@ -34,7 +34,7 @@ public class SomeBodyFragment extends Fragment implements SomeBodyHolder.view {
     private RecyclerView somebody;
     private StaggeredGridLayoutManager needsLayoutManager;
     private LinearLayoutManager somebodyLayoutManager;
-    private NetWork mNetWork;
+
 
     @Nullable
     @Override
@@ -66,15 +66,14 @@ public class SomeBodyFragment extends Fragment implements SomeBodyHolder.view {
 
     private void setNeedsAdapter() {
         List<NeedSomeBodyEntity> needSomeBodyEntities = new ArrayList<>();
-//        mEntityList.getNeedsList(needSomeBodyEntities);
-//        SomoBodyNeedsAdapter adapter = new SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
-//        needsHelp.setAdapter(adapter);
+        mEntityList.getNeedsList(needSomeBodyEntities);
+        SomoBodyNeedsAdapter adapter = new SomoBodyNeedsAdapter(getContext(), needSomeBodyEntities);
+        needsHelp.setAdapter(adapter);
     }
 
     private void setSomebodyAdapter() {
         List<SomeBodyEntity> someBodyEntities=new ArrayList<>();
-        mNetWork=new NetWork(someBodyEntities);
-        someBodyEntities= (List<SomeBodyEntity>) mNetWork.getSomeBodyList();
+        MyEntityList.getSomeBodyList(someBodyEntities);
         SomeBodyRecyclerViewAdapter adapter=new SomeBodyRecyclerViewAdapter(getContext(),someBodyEntities);
         somebody.setAdapter(adapter);
     }
